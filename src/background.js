@@ -24,6 +24,4 @@ const second = colors[Math.floor(Math.random() * colors.length)];
 const third = colors[Math.floor(Math.random() * colors.length)];
 const deg = Math.floor(Math.random() * 180);
 
-console.log(first, second, third, deg);
-
 document.body.style.background = `linear-gradient(to left ,${first}, ${second})`;

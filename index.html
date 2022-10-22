@@ -8,6 +8,14 @@
     <title>Todo-List</title>
   </head>
   <body>
+    <div id="search-div">
+      <div class="search-tag"></div>
+      <div class="search-button"></div>
+    </div>
+    <div id="clock-div">
+      <span class="welcome">어서 와 . . . 쓸데없지만 아무나 다 알려준다는 표준시간부터 보여줄게 . . .</span>
+      <span class="clock"></span>
+    </div>
     <form id="login-form">
       <input required maxlength="15" type="text" placeholder="What is your name?" />
       <input type="submit" value="Log In" />
@@ -16,11 +24,12 @@
       <input type="text" placeholder="Write a To Do and Press Enter" required />
     </form>
     <div class="todo-div">
-      <h1>00:00:00</h1>
       <ul id="todo-list"></ul>
     </div>
     <div class="weather"></div>
 
     <script src="./src/background.js"></script>
+    <script src="./src/clock.js"></script>
+    <script src="./src/search.js"></script>
   </body>
 </html>
