@@ -8,28 +8,55 @@
     <title>Todo-List</title>
   </head>
   <body>
-    <div id="search-div">
-      <div class="search-tag"></div>
-      <div class="search-button"></div>
-    </div>
-    <div id="clock-div">
-      <span class="welcome">어서 와 . . . 쓸데없지만 아무나 다 알려준다는 표준시간부터 보여줄게 . . .</span>
-      <span class="clock"></span>
-    </div>
-    <form id="login-form">
-      <input required maxlength="15" type="text" placeholder="What is your name?" />
-      <input type="submit" value="Log In" />
-    </form>
-    <form id="todo-form" class="hidden">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <div class="todo-div">
-      <ul id="todo-list"></ul>
-    </div>
-    <div class="weather"></div>
+    <main>
+      <div id="search-div">
+        <ul class="search-list">
+          <li><a href="/" id="main.mnu.servertime">표준시간</a></dt>
+          <li><a href="/?host=ticket.interpark.com" id="main.mnu.ticket.interpark.com">인터파크 티켓팅</a></li>
+          <li><a href="/?host=docs.google.com" id="main.mnu.docs.google.com">구글 폼림픽</a></li>
+          <li><a href="/?host=naver.com" id="main.mnu.naver.com">네이버시계</a></li>
+          <li><a href="/bbs.php" id="main.mnu.community">네이비즘 댓글</a></li>
+          <li><a href="/podoal" target="_blank" id="main.mnu.podoal">티켓팅 포도알</a></li>
+          <li><a href="/game" target="_blank" id="main.mnu.game">티켓팅 연습게임</a></li>
+          <li><a href="/report.php" id="main.mnu.report">네이비즘트렌드</a></li>
+        </ul>
+        <div class="search-area">
+          <img src="//data.navyism.com/title_logo.png" align= "absmiddle" alt="네이비즘 로고">
+          <input class="search__input" type="text" placeholder="Are you ready? :)" />
+          <input class="search__button" type="submit" value="Fight!" />
+          <ul>
+            <li style="margin-right:0px; line-height:25px"><a href="/en/" alt="Go to English website">English</a><br></li>
+            <li style="margin-right:0px"><a href="#" rel="nofollow" class="txt3" onclick="javascript:window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title + '\n@timenavyism #서버시간 #네이비즘\nhttps://time.navyism.com'), 'twittersharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="트위터에 서버시간 확인주소를 공유합니다">트윗하기</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="clock-div">
+        <span class="welcome">어서 와 . . . 쓸데없지만 아무나 다 알려준다는 표준시간부터 보여줄게 . . .</span>
+        <span class="clock"></span>
+      </div>
+      <form id="todo-form" class="hidden">
+        <input type="text" placeholder="Write a To Do and Press Enter" required />
+      </form>
+      <div class="todo-div">
+        <ul id="todo-list"></ul>
+      </div>
+      <div class="weather"></div>
+    </main>
+    <section>
+      <form id="login-form" class="hidden">
+        <input class="login__name" required maxlength="15" type="text" placeholder="What's your name?" />
+        <input class="login__button" type="submit" value="Log In" />
+      </form>
+      <div id="greeting-div" class="hidden">
+        <span class="greeting__message"></span>
+        <span class="greeting__etc">성공을 기원해보자!</span>
+      </div>
+    </section>
+    
 
+    <script src="https://kit.fontawesome.com/6042774c59.js" crossorigin="anonymous"></script>
     <script src="./src/background.js"></script>
     <script src="./src/clock.js"></script>
-    <script src="./src/search.js"></script>
+    <script src="./src/greeting.js"></script>
   </body>
 </html>

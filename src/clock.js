@@ -16,7 +16,7 @@ function setClock() {
   const mins = String(defaultMins).padStart(2, "0");
   const secs = String(defaultSecs).padStart(2, "0");
 
-  if (mins === 59) {
+  if (mins == 59) {
     clock.innerHTML = `<h1 style="color:red;">${years}년 ${months}월 ${days}일 ${hours}시 ${mins}분 ${secs}초</h1>`;
   } else {
     clock.innerHTML = `<h1 style="color:#FF6815;">${years}년 ${months}월 ${days}일 ${hours}시 ${mins}분 ${secs}초</h1>`;
