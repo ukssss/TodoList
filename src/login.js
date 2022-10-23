@@ -16,9 +16,18 @@ function onLoginSubmit(event) {
 }
 
 function onEnterUserspace(username) {
+  const hours = new Date().getHours();
+
   todoDiv.classList.remove(HIDDEN_CLASS);
   greetingDiv.classList.remove(HIDDEN_CLASS);
-  greetingDiv.innerHTML = `<span class="greeting__text">Good Morning ${username}!</span>`;
+
+  if (hours >= 6 && hours < 12) {
+    greetingDiv.innerHTML = `<span class="greeting__text">Good Morning ${username} :)</span>`;
+  } else if (hours >= 12 && hours < 18) {
+    greetingDiv.innerHTML = `<span class="greeting__text">Good Afternoon ${username} :)</span>`;
+  } else {
+    greetingDiv.innerHTML = `<span class="greeting__text">Good Night ${username} :)</span>`;
+  }
 }
 
 const saveUsername = localStorage.getItem(USERNAME_KEY);
