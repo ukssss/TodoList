@@ -1,3 +1,5 @@
+@import "/css/reset.css";
+
 .hidden {
   display: none;
 }
@@ -18,6 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "AppleSDGothicNeo", "Noto Sans KR", sans-serif;
+  overflow: hidden;
 }
 
 #top-part {
@@ -63,8 +66,8 @@ body {
 
 #greeting-div {
   display: flex;
+  justify-content: center;
   margin-top: 10px;
-  padding-left: 320px;
   font-size: 30px;
   color: white;
   text-shadow: rgb(80 80 80) -1px -1px 1px;
@@ -75,6 +78,10 @@ body {
 #todo-div {
   width: 534px;
   height: 300px;
+}
+
+#todo-form {
+  margin-bottom: 10px;
 }
 
 .login__input,
@@ -94,13 +101,13 @@ body {
 .todo__list {
   padding: 0;
   width: 550px;
-  height: 600px;
+  height: 450px;
   list-style: none;
   overflow-y: scroll;
 }
 
 .todo__list > li {
-  margin-top: 10px;
+  margin-bottom: 10px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -190,8 +197,8 @@ body {
   font-weight: 600;
   color: white;
   text-shadow: rgb(80 80 80) -1px -1px 1px;
-  position: fixed;
-  bottom: 10px;
+  position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,4 +206,24 @@ body {
 
 .quote {
   margin-right: 50px;
+}
+
+#no-mobile {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: ivory;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1300px) {
+  #no-mobile {
+    display: none;
+  }
 }
