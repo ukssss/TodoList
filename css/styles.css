@@ -101,7 +101,7 @@ body {
 .todo__list {
   padding: 0;
   width: 550px;
-  height: 450px;
+  height: 400px;
   list-style: none;
   overflow-y: scroll;
 }
