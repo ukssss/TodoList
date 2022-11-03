@@ -6,7 +6,11 @@
 
 ### 1. 사용 기술
 
-HTML, CSS, Javascript
+<p align="middle">
+  <img src="https://img.shields.io/badge/language-html-red.svg?style=flat-square"/>
+  <img src="https://img.shields.io/badge/language-css-blue.svg?style=flat-square"/>
+  <img src="https://img.shields.io/badge/language-js-yellow.svg?style=flat-square"/>
+</p>
 
 ### 2. 레이아웃
 
